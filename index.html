@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Splash</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/regForm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- this is the code for navbar -->
+
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="./index.html">raJiB</a></div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li>
+                    <a href="#">Our Services
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="drop-menu">
+                        <li><a href="#">Service 1</a></li>
+                        <li><a href="#">Service 2</a></li>
+                        <li><a href="#">Service 3</a></li>
+                        <li><a href="#">Service 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li id="signIn"><a href="">Sign In
+                        <i class="fa-sharp fa-solid fa-user-plus"></i>
+                    </a></li>
+            </ul>
+            <div class="icon1">
+                <i class="fa-solid fa-bars" id="menuIcon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- this is the main content  -->
+
+    <main class="search-main">
+        <h1>Image Search Engine</h1>
+        <form class="search-form">
+            <input type="text" autocomplete="off" placeholder="Search for any images..." spellcheck="false"
+                id="search-for">
+            <button id="search-btn">Search</button>
+        </form>
+        <p id="description"></p>
+        <div class="search-results">
+        </div>
+        <button id="show-moreBtn">More <i class="fa-solid fa-plus"></i></button>
+    </main>
+
+
+    <!-- code for the registration form -->
+    <main class="forms">
+        <div id="form-container">
+            <div class="header">
+                <h2>Registeration Form</h2>
+            </div>
+            <form class="form" id="form">
+                <div class="form-control">
+                    <label for="userName">Username:</label>
+                    <input type="text" id="userName" placeholder="John Doe" autocomplete="off">
+                    <small></small>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="john@gmail.com" autocomplete="off">
+                    <small></small>
+                </div>
+                <div class="form-control">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="number" id="phoneNumber" placeholder="98XXXXXXXX" autocomplete="off">
+                    <small>Error msg</small>
+                </div>
+                <div class="form-control">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" autocomplete="off" placeholder="Minimum 6 characters">
+                    <small></small>
+                </div>
+                <div class="form-control">
+                    <label for="re-password">Confirm Password:</label>
+                    <input type="password" id="re-password" autocomplete="off" placeholder="Re-enter Your Password">
+                    <small></small>
+                </div>
+                <input type="submit" class="submitBtn" value="Submit" disabled>
+                <h1 class="Or">Or</h1>
+                <button type="submit" class="googleLogin">Log in with<i class="fa-brands fa-google"></i></button>
+            </form>
+        </div>
+    </main>
+
+    <!-- code for the footer -->
+    <footer>
+        <div class="container">
+            <div class="contact-links">
+                <a href="https://twitter.com/home">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/feed/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+            <div class="footer-links">
+                <ul class="linksList">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Latest</a></li>
+                    <li><a href="">Sports</a></li>
+                    <li><a href="">Reel</a></li>
+                    <li><a href="">TV</a></li>
+                    <li><a href="">Culture</a></li>
+                    <li><a href="">Future</a></li>
+                    <li><a href="">Nature</a></li>
+                </ul>
+            </div>
+            <div class="last-info">
+                <span>Copyright @ 2023 Double Splash.</span>
+                <span>We are not responsible if anything happens to you.</span>
+                <span>Thank you for your time.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

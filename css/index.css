@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: black;
+    height: 4.5vw;
+    width: 100%;
+}
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    width: 25%;
+    max-height: 4.5vw;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 3.5vw;
+    line-height: 4.5vw;
+    padding: 0 3vw;
+}
+
+#menuIcon {
+    color: white;
+    line-height: 4.5vw;
+    font-size: 2vw;
+}
+
+.icon1 {
+    display: none;
+}
+
+.nav-links {
+    width: 75%;
+    list-style: none;
+    display: flex;
+    padding-right: 3vw;
+    justify-content: space-between;
+    display: block;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 100;
+    line-height: 4.5vw;
+    border-radius: 5px;
+    padding: 1vw 1.5vw;
+    transition: background-color 0.2s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #3A3B3C;
+}
+
+.nav-links .drop-menu {
+    background-color: #242526;
+    width: 12.3vw;
+    top: 4.5vw;
+    position: absolute;
+    opacity: 0;
+    display: none;
+    list-style: none;
+    text-align: center;
+    z-index: 1;
+    border-radius: 0 0 1vw 1vw;
+}
+
+.drop-menu li a {
+    font-size: 1.5vw;
+    color: gold;
+    line-height: 3.5vw;
+    padding: 0.5vw 0.5vw;
+}
+
+.nav-links li:hover .drop-menu {
+    display: block;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+li a i {
+    width: 1vw;
+    height: 1vw;
+    line-height: 3.5vw;
+}
+
+@media (max-width: 728px) {
+    nav {
+        height: 12vw;
+    }
+
+    .logo a {
+        font-size: 6vw;
+        padding: 0 8vw;
+        line-height: 12vw;
+    }
+
+    .nav-links {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #242526;
+        top: 12vw;
+        line-height: 3vw;
+        text-align: center;
+        z-index: 1;
+        display: none;
+    }
+
+    .showitem {
+        display: block;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid white;
+    }
+
+    .nav-links li a {
+        width: 100%;
+        font-size: 4vw;
+        line-height: 8vw;
+    }
+
+    .nav-links .drop-menu {
+        width: 40vw;
+        position: absolute;
+        left: 30vw;
+        top: 24.55vw;
+    }
+
+    #menuIcon {
+        color: white;
+        line-height: 12vw;
+        font-size: 5vw;
+    }
+
+    .icon1 {
+        display: block;
+        line-height: 12vw;
+    }
+
+    .fa-solid {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width: 729px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: green;
+    }
+}
+
+.search-main {
+    position: relative;
+    background: linear-gradient(135deg, #3498db, #e74c3c);
+    padding: 2vw 0;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #fff;
+    font-size: 3vw;
+    font-family: 'Bree Serif';
+    padding: 2vw 0 2vw;
+    text-align: center;
+}
+
+.search-form {
+    width: 80%;
+    height: 5vw;
+    margin: 2vw auto;
+    display: flex;
+    align-items: center;
+}
+
+#search-for {
+    flex: 1;
+    height: 5vw;
+    padding: 0 3vw;
+    font-size: 1.5vw;
+    border-radius: 1vw 0 0 1vw;
+    border: none;
+    font-weight: bold;
+    outline: none;
+}
+
+::placeholder {
+    font-size: large;
+}
+
+#show-moreBtn, #search-btn {
+    border: none;
+    outline: none;
+    background-color: orangered;
+    color: white;
+    padding: 1vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+#search-btn {
+    height: 5vw;
+    width: 10vw;
+    border-radius: 0 1vw 1vw 0;
+}
+
+p {
+    width: 90%;
+    margin: auto;
+    color: #fff;
+    font-size: 2vw;
+    margin: 2vw 5vw;
+}
+
+.imgs {
+    display: flex;
+    position: relative;
+}
+
+.search-results {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2vw;
+}
+
+.imgs {
+    width: 100%;
+    height: 100%;
+}
+
+.imgs img {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+    position: relative;
+    border-radius: 1vw;
+    z-index: 0;
+}
+
+.imgs .download-icon {
+    width: 2vw;
+    height: 2vw;
+    background-color: white;
+    position: absolute;
+    bottom: 0.5vw;
+    right: 0.5vw;
+    border-radius: 50%;
+    padding: 0.5vw;
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+}
+
+.imgs:hover .download-icon {
+    display: block;
+}
+
+.download-icon i {
+    color: black;
+}
+
+#show-moreBtn {
+    height: 4vw;
+    width: 8vw;
+    border-radius: 0.5vw;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 45vw;
+}
+
+#show-moreBtn i {
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    main{
+        min-height: 100vh;
+    }
+    h1 {
+        font-size: 5vw;
+    }
+
+    .search-form {
+        height: 9vw;
+    }
+
+    #search-for {
+        height: 9vw;
+        line-height: 9vw;
+        font-size: 3.3vw;
+    }
+
+    ::placeholder {
+        font-size: 3vw;
+    }
+
+    #search-btn {
+        height: 9vw;
+        width: 15vw;
+        font-size: 2.5vw;
+    }
+
+    p {
+        font-size: 3vw;
+        line-height: 4.5vw;
+    }
+
+    .search-results {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.6vw;
+    }
+
+    .search-results img {
+        height: 40vw;
+    }
+
+    .imgs .download-icon{
+        width: 6vw;
+        height: 6vw;
+    }
+    .imgs .download-icon i{
+        padding: 0.5vw 1vw 1vw 1vw;
+    }
+
+    #show-moreBtn {
+        height: 9vw;
+        width: 15vw;
+        font-size: 3vw;
+    }
+
+    #show-moreBtn i {
+        font-size: 3vw;
+    }
+
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* css for registeration form */
+
+
+
+
+
+
+/* the css for footer starts from here */
+
+footer {
+    width: 100%;
+    min-height: 12vw;
+    background-color: black;
+}
+.container{
+    width: 95%;
+    margin: 0vw auto;
+    padding-bottom: 1vw;
+    
+}
+
+.contact-links{
+    padding: 1vw;
+    width: 20%;
+    height: 4vw;
+    float: right;
+    display: flex;
+}
+
+.contact-links a{
+    width: 6vw;
+    height: 4vw;
+    text-align: center;
+}
+
+.contact-links a i{
+    color: white;
+    line-height: 4vw;
+    font-size: 2vw;
+}
+
+.footer-links{
+    width: 90%;
+    margin: auto;
+}
+
+.linksList {
+    width: 90%;
+    list-style: none;
+    display: grid;
+    grid-row: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3vw;
+    margin-bottom: 3vw;
+}
+.linksList li{
+    text-align: left;
+    margin: 1vw 4vw 0vw 0vw;
+}
+
+.linksList li a{
+    width: 3vw;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+}
+
+.linksList li a:hover {
+    font-size: 1.7vw;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    transition: all ease 0.4s;
+  }
+
+.last-info{
+    width: 90%;
+    margin: auto;
+}
+span{
+    color: white;
+    font-size: 1vw;
+}
+
+@media(max-width:628px){
+    .contact-links a i{
+        font-size: 3vw;
+    }
+
+    .linksList li a{
+        font-size: 2.5vw;
+    }
+    span{
+        font-size: 2vw;
+    }
+}
+
+
+
+
+
